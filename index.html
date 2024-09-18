@@ -18,7 +18,15 @@
   }
 </style></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="The gallery" tags="" position="725,350" size="100,100">You find yourself standing before a single photograph. As you reach out, a voice—soft, almost imperceptible—whispers that this image will reveal who you truly are. The words ripple through the air, echoing in the silence. Suddenly, the space around you shifts, expanding until nothing remains but a vast, blinding whiteness.
 
-&lt;img src=&quot;images/The gallery.jpg&quot; width=&quot;313&quot; height=&quot;207.5&quot; alt=&quot;The Gallery&quot;&gt;
+&lt;img src=&quot;images/The gallery.jpg&quot; width=&quot;313&quot; height=&quot;207.5&quot; id=&quot;myImage&quot; alt=&quot;The Gallery&quot;&gt;
+&lt;style&gt;
+  #myImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+&lt;/style&gt;
 
 Three photos now hover before you, each pulsing faintly with life. You feel drawn to them, as if they hold answers to questions you didn&#39;t even realize you were asking.
 Below is the description of each. Which photo will you choose? The decision is yours.
@@ -27,10 +35,17 @@ Below is the description of each. Which photo will you choose? The decision is y
 [[A lady standing on the beach]]
 [[Children on swings]]</tw-passagedata><tw-passagedata pid="2" name="A guy fishing" tags="" position="850,200" size="100,100">Your fingertips graze something solid—a cylindrical object in your grip. It feels smooth, worn, yet sturdy, resting comfortably in your hand. As you shift slightly, you feel the weight of your body pressing against the earth, the slight tension in your back. Your legs are bent, resting near the cool edge of a surface, with the faint pressure of soft grass beneath. The evening air clings to your skin, cool yet not cold. The soft fabric of your shirt moves with each breath, and you can sense the vast, quiet presence of open water before you, its surface whispering against the shore.
 
-&lt;audio autoplay&gt;
+&lt;audio id=&quot;myAudio&quot;&gt;
   &lt;source src=&quot;sounds/Fish.wav&quot; type=&quot;audio/wav&quot;&gt;
   Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="3" name="A lady standing on the beach" tags="" position="850,350" size="100,100">&lt;img src=&quot;images/A lady standing on the beach.jpg&quot; width=&quot;313&quot; height=&quot;207.5&quot; alt=&quot;A Lady Standing on the Beach&quot;&gt;
+&lt;/audio&gt;
+
+&lt;script&gt;
+  setTimeout(function() {
+    var audio = document.getElementById(&quot;myAudio&quot;);
+    audio.play();
+  }, );  // 16-second delay before playing the audio
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="3" name="A lady standing on the beach" tags="" position="850,350" size="100,100">&lt;img src=&quot;images/A lady standing on the beach.jpg&quot; width=&quot;313&quot; height=&quot;207.5&quot; alt=&quot;A Lady Standing on the Beach&quot;&gt;
 </tw-passagedata><tw-passagedata pid="4" name="Children on swings" tags="" position="850,500" size="100,100">&lt;img src=&quot;images/Children on swings.jpg&quot; width=&quot;313&quot; height=&quot;207.5&quot; alt=&quot;Children on swings&quot;&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
