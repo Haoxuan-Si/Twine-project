@@ -16,21 +16,21 @@
     margin-right: auto;
     max-width: 100%;
   }
-</style></style><script role="script" id="twine-user-script" type="text/twine-javascript">// Event listener to trigger after a passage is displayed
+</style></style><script role="script" id="twine-user-script" type="text/twine-javascript">// Check for passage change and play audio only in "it remains veiled in mystery" passage
 $(document).on('passage:after', function() {
     // Check if the current passage is "it remains veiled in mystery"
     if (window.passage.name === "it remains veiled in mystery") {
-        // Create the audio object if it hasn't been created yet
+        // If the audio hasn't been created, create it and start playing
         if (!window.audio) {
-            window.audio = new Audio('sounds/it remains veiled in mystery.mp3'); // Correct path to the audio file
-            window.audio.loop = false;  // Set to true if you want the audio to loop
-            window.audio.autoplay = true;  // Enable autoplay
-            window.audio.play();  // Start playing the audio automatically
+            window.audio = new Audio('sounds/it remains veiled in mystery.mp3');
+            window.audio.loop = false;  // Set to true if you want it to loop continuously
+            window.audio.play();  // Play the audio
         } else {
-            window.audio.play();  // Resume the audio if it was paused or stopped
+            window.audio.play();  // Resume if paused
         }
     }
-});</script><tw-passagedata pid="1" name="the gallery" tags="" position="800,400" size="100,100">You find yourself standing before a single photograph. As you reach out, a voice—soft, almost imperceptible—whispers that this image will reveal who you truly are. The words ripple through the air, echoing in the silence. Suddenly, the space around you shifts, expanding until nothing remains but a vast, blinding whiteness.
+});
+</script><tw-passagedata pid="1" name="the gallery" tags="" position="800,400" size="100,100">You find yourself standing before a single photograph. As you reach out, a voice—soft, almost imperceptible—whispers that this image will reveal who you truly are. The words ripple through the air, echoing in the silence. Suddenly, the space around you shifts, expanding until nothing remains but a vast, blinding whiteness.
 
 &lt;img src=&quot;images/The gallery.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;The Gallery&quot;&gt;
 &lt;style&gt;
@@ -81,16 +81,11 @@ A weight trembles at the other end, faint yet distinct, tugging back with a puls
 
 The photograph captures a single string, thin and fragile, disappearing into swirling fog. It hangs in stillness, yet you feel its pull, a quiet but undeniable tension that stirs something familiar, as if your fingers remember its resistance—the promise of something hidden just beyond reach. You step closer, the air around you thick with anticipation, the string silently beckoning you to pull. The fog seems to move, alive with the presence of something waiting to reveal itself. Time bends, the pull intensifies, but the photograph holds its secret, suspended on the brink of revelation, as though the moment to uncover it hasn’t yet arrived.
 
-Driven by curiosity, your hand reaches out to touch the photograph, the surface cool beneath your fingertips, as if daring you to uncover the mystery it holds.
-
-&lt;audio controls&gt;
-  &lt;source src=&quot;sounds/it remains veiled in mystery.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
-  Your browser does not support the audio element.
-&lt;/audio&gt;
+Driven by curiosity, your hand reaches out to touch [[the photograph]], the surface cool beneath your fingertips, as if daring you to uncover the mystery it holds.
 
 &lt;a href=&quot;Revelation&quot;&gt;
   &lt;img src=&quot;images/Minimal1.jpg&quot; alt=&quot;A mysterious photograph 1&quot;&gt;
-&lt;/a&gt;</tw-passagedata><tw-passagedata pid="10" name="what lies beneath" tags="" position="1400,200" size="100,100">&lt;img src=&quot;images/A guy fishing.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;A Guy Fishing&quot;&gt;
+&lt;/a&gt;</tw-passagedata><tw-passagedata pid="10" name="what lies beneath" tags="" position="1425,200" size="100,100">&lt;img src=&quot;images/A guy fishing.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;A Guy Fishing&quot;&gt;
 &lt;style&gt;
   #myImage {
     display: block;
@@ -100,7 +95,15 @@ Driven by curiosity, your hand reaches out to touch the photograph, the surface 
   }
 &lt;/style&gt;
 
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;) Nothing happens and you are now back at [[the gallery]].</tw-passagedata><tw-passagedata pid="11" name="Revelation" tags="" position="1475,375" size="100,100">&lt;img src=&quot;images/Family1.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;Family 1&quot;&gt;
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;) [Nothing happens and you are now back at [[the gallery]]].</tw-passagedata><tw-passagedata pid="11" name="Revelation" tags="" position="1675,275" size="100,100">&lt;img src=&quot;images/Family1.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;Family 1&quot;&gt;
+&lt;style&gt;
+  #myImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="12" name="the photograph" tags="" position="1550,400" size="100,100">&lt;img src=&quot;images/Family1.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;Family 1&quot;&gt;
 &lt;style&gt;
   #myImage {
     display: block;
