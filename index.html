@@ -16,7 +16,20 @@
     margin-right: auto;
     max-width: 100%;
   }
-</style></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="The gallery" tags="" position="725,350" size="100,100">You find yourself standing before a single photograph. As you reach out, a voice—soft, almost imperceptible—whispers that this image will reveal who you truly are. The words ripple through the air, echoing in the silence. Suddenly, the space around you shifts, expanding until nothing remains but a vast, blinding whiteness.
+</style></style><script role="script" id="twine-user-script" type="text/twine-javascript">// Function to start the audio only when the specific passage is shown
+$(document).on('passage:after', function() {
+    // Check if the current passage is "it remains veiled in mystery"
+    if (window.passage.name === "it remains veiled in mystery") {
+        // Create the audio object if it hasn't been created yet
+        if (!window.audio) {
+            window.audio = new Audio('sounds/it remains veiled in mystery.mp3'); // Correct path to the sound file
+            window.audio.loop = false;  // Set to true if you want the audio to loop
+            window.audio.play();  // Start playing the audio
+        } else {
+            window.audio.play();  // Resume the audio if it was paused or stopped
+        }
+    }
+});</script><tw-passagedata pid="1" name="The gallery" tags="" position="725,350" size="100,100">You find yourself standing before a single photograph. As you reach out, a voice—soft, almost imperceptible—whispers that this image will reveal who you truly are. The words ripple through the air, echoing in the silence. Suddenly, the space around you shifts, expanding until nothing remains but a vast, blinding whiteness.
 
 &lt;img src=&quot;images/The gallery.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;The Gallery&quot;&gt;
 &lt;style&gt;
@@ -67,9 +80,15 @@ A weight trembles at the other end, faint yet distinct, tugging back with a puls
 
 The photograph captures a single string, thin and fragile, disappearing into swirling fog. It hangs in stillness, yet you feel its pull, a quiet but undeniable tension that stirs something familiar, as if your fingers remember its resistance—the promise of something hidden just beyond reach. You step closer, the air around you thick with anticipation, the string silently beckoning you to pull. The fog seems to move, alive with the presence of something waiting to reveal itself. Time bends, the pull intensifies, but the photograph holds its secret, suspended on the brink of revelation, as though the moment to uncover it hasn’t yet arrived.
 
-Which photograph are you truly looking at?
-&lt;a href=&quot;NewParagraph&quot;&gt;
-  &lt;img src=&quot;images/picture.jpg&quot; alt=&quot;A mysterious photograph&quot;&gt;
+Driven by curiosity, your hand reaches out to touch the photograph, the surface cool beneath your fingertips, as if daring you to uncover the mystery it holds.
+
+&lt;audio controls&gt;
+  &lt;source src=&quot;sounds/it remains veiled in mystery.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;a href=&quot;Revelation&quot;&gt;
+  &lt;img src=&quot;images/Minimal1.jpg&quot; alt=&quot;A mysterious photograph 1&quot;&gt;
 &lt;/a&gt;</tw-passagedata><tw-passagedata pid="10" name="what lies beneath" tags="" position="1250,150" size="100,100">&lt;img src=&quot;images/A guy fishing.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;A Guy Fishing&quot;&gt;
 &lt;style&gt;
   #myImage {
@@ -80,7 +99,15 @@ Which photograph are you truly looking at?
   }
 &lt;/style&gt;
 
-[[Nothing happens]]</tw-passagedata><tw-passagedata pid="11" name="Nothing happens" tags="" position="1450,375" size="100,100"></tw-passagedata></tw-storydata>
+[[Nothing happens]]</tw-passagedata><tw-passagedata pid="11" name="Nothing happens" tags="" position="1525,225" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="Revelation" tags="" position="1400,425" size="100,100">&lt;img src=&quot;images/Family1.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;Family 1&quot;&gt;
+&lt;style&gt;
+  #myImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+&lt;/style&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
