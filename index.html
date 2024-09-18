@@ -16,15 +16,16 @@
     margin-right: auto;
     max-width: 100%;
   }
-</style></style><script role="script" id="twine-user-script" type="text/twine-javascript">// Function to start the audio only when the specific passage is shown
+</style></style><script role="script" id="twine-user-script" type="text/twine-javascript">// Event listener to trigger after a passage is displayed
 $(document).on('passage:after', function() {
     // Check if the current passage is "it remains veiled in mystery"
     if (window.passage.name === "it remains veiled in mystery") {
         // Create the audio object if it hasn't been created yet
         if (!window.audio) {
-            window.audio = new Audio('sounds/it remains veiled in mystery.mp3'); // Correct path to the sound file
+            window.audio = new Audio('sounds/it remains veiled in mystery.mp3'); // Correct path to the audio file
             window.audio.loop = false;  // Set to true if you want the audio to loop
-            window.audio.play();  // Start playing the audio
+            window.audio.autoplay = true;  // Enable autoplay
+            window.audio.play();  // Start playing the audio automatically
         } else {
             window.audio.play();  // Resume the audio if it was paused or stopped
         }
