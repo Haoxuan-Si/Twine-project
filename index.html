@@ -16,7 +16,20 @@
     margin-right: auto;
     max-width: 100%;
   }
-</style></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="the gallery" tags="" position="875,575" size="100,100">You find yourself standing before a single photograph. As you reach out, a voice—soft, almost imperceptible—whispers that this image will reveal who you truly are. The words ripple through the air, echoing in the silence. Suddenly, the space around you shifts, expanding until nothing remains but a vast, blinding whiteness.
+</style></style><script role="script" id="twine-user-script" type="text/twine-javascript">// Check for passage change and play audio only in "it remains veiled in mystery" passage
+$(document).on('passage:after', function() {
+    // Check if the current passage is "it remains veiled in mystery"
+    if (window.passage.name === "it remains veiled in mystery") {
+        // Create the audio object if it hasn't been created yet
+        if (!window.audio) {
+            window.audio = new Audio('sounds/it remains veiled in mystery.mp3'); // Path to your audio file
+            window.audio.loop = false;  // Set to true if you want the audio to loop continuously
+            window.audio.play();  // Start playing the audio
+        } else {
+            window.audio.play();  // Resume the audio if it was paused or stopped
+        }
+    }
+});</script><tw-passagedata pid="1" name="the gallery" tags="" position="875,575" size="100,100">You find yourself standing before a single photograph. As you reach out, a voice—soft, almost imperceptible—whispers that this image will reveal who you truly are. The words ripple through the air, echoing in the silence. Suddenly, the space around you shifts, expanding until nothing remains but a vast, blinding whiteness.
 
 &lt;img src=&quot;images/The gallery.jpg&quot; id=&quot;myImage&quot; width=&quot;417&quot; height=&quot;277&quot; alt=&quot;The Gallery&quot;&gt;
 &lt;style&gt;
@@ -129,9 +142,7 @@ Nothing happens and you are now back at [[the gallery]].</tw-passagedata><tw-pas
   }
 &lt;/style&gt;
 
-[[Who am I? And what is this space I inhabit?]]
-
-&lt;button onclick=&quot;window.audio.play();&quot;&gt;Resume Audio&lt;/button&gt;</tw-passagedata><tw-passagedata pid="12" name="Who am I? And what is this space I inhabit?" tags="" position="2000,500" size="100,100">&lt;div class=&quot;image-container&quot;&gt;
+[[Who am I? And what is this space I inhabit?]]</tw-passagedata><tw-passagedata pid="12" name="Who am I? And what is this space I inhabit?" tags="" position="2000,500" size="100,100">&lt;div class=&quot;image-container&quot;&gt;
   &lt;img src=&quot;images/Home1.jpg&quot; id=&quot;myImage1&quot; width=&quot;440&quot; height=&quot;277&quot; alt=&quot;Home 1&quot;&gt;
   &lt;img src=&quot;images/Home2.jpg&quot; id=&quot;myImage2&quot; width=&quot;440&quot; height=&quot;277&quot; alt=&quot;Home 2&quot;&gt;
 &lt;/div&gt;
