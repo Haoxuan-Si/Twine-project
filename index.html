@@ -19,8 +19,12 @@
     background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.5; /* Adjust this value (0.0 to 1.0) for different levels of transparency */
-    z-index: -1; /* Ensures the background stays behind your text */
+    opacity: 0.5; /* Adjust this value (0 = fully transparent, 1 = fully opaque) */
+    z-index: -1; /* Makes sure the background stays behind the content */
+}
+
+tw-story {
+    background-color: #f5f5dc; /* The background color behind the image */
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Check for passage change and play audio only in "it remains veiled in mystery" passage
 $(document).on('passage:after', function() {
     // Check if the current passage is "it remains veiled in mystery"
