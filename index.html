@@ -9,22 +9,11 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Gallery.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Gallery" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="E94248A2-E447-4B86-8FA0-77901A98DC84" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+<tw-storydata name="Gallery" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="E94248A2-E447-4B86-8FA0-77901A98DC84" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
+    background-color: #f5f5dc;
     background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.5; /* Adjust this value (0 = fully transparent, 1 = fully opaque) */
-    z-index: -1; /* Makes sure the background stays behind the content */
-}
-
-tw-story {
-    background-color: #f5f5dc; /* The background color behind the image */
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Check for passage change and play audio only in "it remains veiled in mystery" passage
 $(document).on('passage:after', function() {
     // Check if the current passage is "it remains veiled in mystery"
